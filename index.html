@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JOBS4YOU</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link rel="icon" type="image/x-icon" href="images/jobs4you-logo.png" />
+        <style>
+        .btn-log {
+            border: 1px solid #f2f2f2;
+            border-radius: 1px;
+        }
+        </style>
+    </head>
+
+    <body class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg p-4  shadow border-bottom border-info">
+            <div class="container mx-auto">
+                <div class="navbar-header d-flex">
+                    <div class="pl-3"> </div>
+                    <span class="ml-auto">
+                        <button class="navbar-dark navbar-toggler outline-none" type="button" data-toggle="collapse"
+                            data-target="#collapsiblenavbar" aria-controls="collapsiblenavbar" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse mx-auto" id="collapsiblenavbar">
+                    <ul class="navbar-nav pt-1 ml-auto">
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="register-employee.html">Register Employee</a>
+                        </li>
+
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="register-employer.html">Register Employer</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="">Post Job</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="">Manage Job</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="contact.html">Contact Us </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a href="" class="btn btn-default shadow-lg text-light btn-log py-1 my-1">Login</a>
+                        </li>
+                        <ul>
+                </div>
+            </div>
+            <div class="modal fade shadow" id="login" tabindex="-1" role="dialog" aria-labelledby="login"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-md" role="logins">
+                    <div class="modal-content border-info shadow">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="login"><b class="pl-4 text-info">Enter your Credentials to
+                                    Login</b></h3>
+                        </div>
+                        <div class="modal-body p-5">
+                            <form action="process_login.php" method=POST>
+                                <div class="form-group">
+                                    <label for="name">Username</label>
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder="Enter your email here">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password</label>
+                                    <input type="password" class="form-control" name="pwd"
+                                        placeholder="Type your password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Type/Role</label>
+                                    <select class="form-control" name="cat">
+                                        <option> employee
+                                        <option> employer
+                                    </select>
+
+                                </div>
+                                <div class="form-group offset-lg-8 py-3 mb-5">
+                                    <button type="submit"
+                                        class="btn btn-sm px-3 d-block clearfix float-right bg-info text-light font-weight-bold">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="header-wrapper">
+            <div id="header">
+                <div id="menu">
+                    <<h2 class="pt-3 " style="color:#fff">
+                        <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="alternate">Find a
+                            job that matches your qualifications today!</marquee>
+                        </h2>
+                </div>
+                <!-- end #menu -->
+                <div id="search">
+                    <<form class="form-group" action="">
+                        <div class="input-group">
+                            <input id="search-input" name="search" type="search" class="form-control"
+                                placeholder="Search something..." autocomplete="off">
+                            <button id="search-button" type="" class="btn btn-info">
+                                GO
+                            </button>
+                        </div>
+                        </form>
+                        <div class="text-center">
+                            <img src="images/jobs4you-logo.png" alt="" width="150">
+                        </div>
+                </div>
+                <!-- end #search -->
+            </div>
+        </div>
+        <!-- end #header -->
+        <!-- end #header-wrapper -->
+        <div id="logo">
+            <div class="pb-5">
+                <img src="images/jobs4you-logo.png" alt="" width="250">
+                <h6 class="text-white pt-4">Create more Job opportunities in the Community!</h6>;
+                }
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="page">
+                <div id="page-bgtop">
+                    <hr />
+                    <!-- end #logo -->
+                    <div id="content">
+                        <div class="text-light">
+                            <h2 class="text-light pb-3">
+                                Login to your account to see the available jobs for you, or to create more jobs.
+                            </h2>
+                            <h4>
+                                Jobs4you is you platform, is our platform.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end #content -->
+                <div id="sidebar">
+                    <div class="card shadow-sm pr-3 py-4">
+
+                        <form class="p-2 pl-4" action="process_login.php" method=POST>
+                            <div class="form-group">
+                                <label for="email">Username</label>
+                                <input type="text" class="form-control" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
+                                <input type="password" class="form-control" name="pwd"
+                                    placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Type/Role</label>
+                                <select class="form-control" name="cat">
+                                    <option> employee
+                                    <option> employer
+                                </select>
+                            </div>
+                            <div class="form-group offset-lg-8 py-3 mb-5">
+                                <button type="submit"
+                                    class="btn btn-sm rounded-sm d-block clearfix float-right bg-info text-light font-weight-bold">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end #sidebar -->
+                </div>
+            </div>
+            <div class="mb-5" style="clear: both;">&nbsp;</div>
+            <!-- end #page -->
+            <div id="footer">
+                <div class="shadow border-top border-info py-3 text-light" style="background:#18323d;">
+                    <h6>
+                        <centre>Copyright © JOBS4YOU 2022 | All Rights Reserved. -| Credit to Wilson</centre>
+                    </h6>
+                </div>
+                <script src="bootstrap/jquery.min.js"></script>
+                <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+                <body>
+
+</html>
+</div>
+<!-- end #footer -->
